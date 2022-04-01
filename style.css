@@ -94,7 +94,13 @@ main {
     line-height: 19px;
 }
 
-.Selecionado {
+.pratoSelecionado {
+    box-shadow: inset 0px 0px 0px 5px #32B72F;
+}
+.bebidaSelecionado {
+    box-shadow: inset 0px 0px 0px 5px #32B72F;
+}
+.sobremesaSelecionado {
     box-shadow: inset 0px 0px 0px 5px #32B72F;
 }
 /*END-CONTEUDO*/
