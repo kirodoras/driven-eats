@@ -93,6 +93,10 @@ main {
     font-size: 16px;
     line-height: 19px;
 }
+
+.Selecionado {
+    box-shadow: inset 0px 0px 0px 5px #32B72F;
+}
 /*END-CONTEUDO*/
 
 /*FOOTER*/
@@ -133,10 +137,6 @@ footer div button {
 
     text-shadow: black 0.5px 0.5px 1px;
 }
-
-/*footer div button:focus {
-    background-color: green;
-}*/
 /*END-FOOTER*/
 
 /*TEXTOS*/
