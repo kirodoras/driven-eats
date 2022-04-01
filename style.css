@@ -95,13 +95,13 @@ main {
 }
 
 .pratoSelecionado {
-    box-shadow: inset 0px 0px 0px 5px #32B72F;
+    box-shadow: inset 0px 0px 0px 5px var(--cor-active);
 }
 .bebidaSelecionado {
-    box-shadow: inset 0px 0px 0px 5px #32B72F;
+    box-shadow: inset 0px 0px 0px 5px var(--cor-active);
 }
 .sobremesaSelecionado {
-    box-shadow: inset 0px 0px 0px 5px #32B72F;
+    box-shadow: inset 0px 0px 0px 5px var(--cor-active);
 }
 /*END-CONTEUDO*/
 
@@ -142,6 +142,10 @@ footer div button {
     letter-spacing: 0.018em;
 
     text-shadow: black 0.5px 0.5px 1px;
+}
+
+.buttonActive {
+    background-color: var(--cor-active);
 }
 /*END-FOOTER*/
 

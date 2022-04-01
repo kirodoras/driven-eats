@@ -5,7 +5,9 @@ function cardSelectPrato(whichCard) {
         cardSelecionado.classList.remove("pratoSelecionado");
     }
 
-    whichCard.classList.add("pratoSelecionado");
+    escolhaPratos = whichCard.classList.add("pratoSelecionado");
+
+    checkThree();
 }
 
 function cardSelectBebida(whichCard) {
@@ -16,6 +18,8 @@ function cardSelectBebida(whichCard) {
     }
 
     whichCard.classList.add("bebidaSelecionado");
+
+    checkThree();
 }
 
 function cardSelectSobremesa(whichCard) {
@@ -26,4 +30,18 @@ function cardSelectSobremesa(whichCard) {
     }
 
     whichCard.classList.add("sobremesaSelecionado");
+
+    checkThree();
+}
+
+function checkThree () {
+    const statusPratos = document.querySelector(".pratoSelecionado");
+    const statusBebida = document.querySelector(".bebidaSelecionado");
+    const statusSobremesa = document.querySelector(".sobremesaSelecionado");
+    const buttonClose = document.querySelector("footer div button");
+    
+    if(statusPratos !== null && statusBebida !== null && statusSobremesa !== null){
+            buttonClose.classList.add("buttonActive");
+            buttonClose.innerHTML = "Fechar pedido";
+    }
 }
