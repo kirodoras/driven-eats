@@ -10,6 +10,33 @@
 </head>
 <body>
     <div class="content">
+        <div class="modal hidden">
+            <div class="place-confirmacao">
+                <div class="confirmacao">
+                    <h6>Confirme seu pedido</h6>
+                    <div class="confirmacao-prato">
+                        <span>Frango Yin Yang</span>
+                        <strong>14,90</strong>
+                    </div>
+                    <div class="confirmacao-bebida">
+                        <span>Coquinha gelada</span>
+                        <strong>4,90</strong>
+                    </div>
+                    <div class="confirmacao-sobremesa">
+                        <span>Pudim</span>
+                        <strong>7,90</strong>
+                    </div>
+                    <div class="confirmacao-total">
+                        <span>TOTAL</span>
+                        <p>R$ <strong>27,70</strong></p>
+                    </div>
+                    <button type="button" onclick="sendRequest()">
+                        <p>Tudo certo, pode pedir!</p>
+                    </button>
+                    <div class="modal-cancel" onclick="closeModal()">Cancelar</div>
+                </div>
+            </div>
+        </div>
         <header>
             <h1>DrivenEats</h1>
             <h2>Sua comida em 6 minutos</h2>
@@ -23,7 +50,10 @@
                         <h4>Frango Yin Yang</h4>
                     </div>
                     <h5>Um pouco de batata, um pouco de salada.</h5>
-                    <span>R$ <strong>14,90</strong></span>
+                    <div class="card-footerP">
+                        <span>R$ <strong>14,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
                 </div>
                 <div class="card" onclick="cardSelectPrato(this)">
                     <div class="card-head">
@@ -31,7 +61,10 @@
                         <h4>Bife Acebolado</h4>
                     </div>
                     <h5>Um pouco de tomate, um pouco de alface.</h5>
-                    <span>R$ <strong>16,90</strong></span>
+                    <div class="card-footerP">
+                        <span>R$ <strong>16,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
                 </div>
                 <div class="card" onclick="cardSelectPrato(this)">
                     <div class="card-head">
@@ -39,7 +72,21 @@
                         <h4>Calabresa</h4>
                     </div>
                     <h5>Um pouco de vinagrete, um pouco de feijão</h5>
-                    <span>R$ <strong>12,90</strong></span>
+                    <div class="card-footerP">
+                        <span>R$ <strong>12,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
+                </div>
+                <div class="card" onclick="cardSelectPrato(this)">
+                    <div class="card-head">
+                        <img src="assets/camarao-prato.jpeg" alt="">
+                        <h4>Camarão</h4>
+                    </div>
+                    <h5>Um pouco de camarão, um pouco de macarrão</h5>
+                    <div class="card-footerP">
+                        <span>R$ <strong>28,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
                 </div>
             </div>
             <h3>Agora, sua bebida</h3>
@@ -50,15 +97,21 @@
                         <h4>Coquinha gelada</h4>
                     </div>
                     <h5>Lata 350ml</h5>
-                    <span>R$ <strong>4,90</strong></span>
+                    <div class="card-footerB">
+                        <span>R$ <strong>4,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
                 </div>
                 <div class="card" onclick="cardSelectBebida(this)">
                     <div class="card-head">
                         <img src="assets/cerveja.jpeg" alt="">
                         <h4>Cerveja Miller</h4>
                     </div>
-                    <h5>A melhor de todos os tempos.</h5>
-                    <span>R$ <strong>8,90</strong></span>
+                    <h5>A melhor de todos os tempos. <br> Para Maiores de 18</h5>
+                    <div class="card-footerB">
+                        <span>R$ <strong>8,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
                 </div>
                 <div class="card" onclick="cardSelectBebida(this)">
                     <div class="card-head">
@@ -66,7 +119,21 @@
                         <h4>Suco de Laranja</h4>
                     </div>
                     <h5>Delicioso.</h5>
-                    <span>R$ <strong>6,90</strong></span>
+                    <div class="card-footerB">
+                        <span>R$ <strong>6,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
+                </div>
+                <div class="card" onclick="cardSelectBebida(this)">
+                    <div class="card-head">
+                        <img src="assets/agua.jpeg" alt="">
+                        <h4>Água Mineral</h4>
+                    </div>
+                    <h5>250 ml</h5>
+                    <div class="card-footerB">
+                        <span>R$ <strong>3,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
                 </div>
             </div>
             <h3>Por fim, sua sobremesa</h3>
@@ -77,7 +144,10 @@
                         <h4>Pudim</h4>
                     </div>
                     <h5>Apenas pudim.</h5>
-                    <span>R$ <strong>7,90</strong></span>
+                    <div class="card-footerS">
+                        <span>R$ <strong>7,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
                 </div>
                 <div class="card" onclick="cardSelectSobremesa(this)">
                     <div class="card-head">
@@ -85,7 +155,10 @@
                         <h4>Petit Gateu</h4>
                     </div>
                     <h5>Acompanha sorvete e moranho.</h5>
-                    <span>R$ <strong>19,90</strong></span>
+                    <div class="card-footerS">
+                        <span>R$ <strong>19,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
                 </div>
                 <div class="card" onclick="cardSelectSobremesa(this)">
                     <div class="card-head">
@@ -93,14 +166,28 @@
                         <h4>Sorvete</h4>
                     </div>
                     <h5>Três bolas.</h5>
-                    <span>R$ <strong>5,90</strong></span>
+                    <div class="card-footerS">
+                        <span>R$ <strong>5,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
+                </div>
+                <div class="card" onclick="cardSelectSobremesa(this)">
+                    <div class="card-head">
+                        <img src="assets/bolo.jpeg" alt="">
+                        <h4>Bolo de Pote</h4>
+                    </div>
+                    <h5>300g</h5>
+                    <div class="card-footerS">
+                        <span>R$ <strong>8,90</strong></span>
+                        <img class="hidden"src="assets/checkmark-circle1.png" alt="">
+                    </div>
                 </div>
             </div>
         </main>
     </div>
     <footer>
         <div>
-            <button type="button" onclick="sendRequest()">
+            <button type="button" onclick="openModal()">
                 <p>Selecione os 3 itens <br> para fechar o pedido</p>
             </button>
         </div>
